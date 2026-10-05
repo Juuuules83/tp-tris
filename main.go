@@ -1,6 +1,6 @@
 package main
 
-/* import "fmt"
+import "fmt"
 
 func main() {
 	liste := []int{5, 2, 8, 1, 7, 3, 6, 4}
@@ -10,4 +10,4 @@ func main() {
 	BubbleSort(liste)
 
 	fmt.Println("après :", liste)
-} */
+}
