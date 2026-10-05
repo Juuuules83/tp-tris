@@ -5,12 +5,6 @@ import (
 	"math/rand"
 )
 
-// Score représente le résultat d'un joueur.
-type Score struct {
-	Player string
-	Score  int
-}
-
 var r = rand.New(rand.NewSource(69))
 
 // RandomScores renvoie n scores tirés au hasard entre 0 et 1 000.
