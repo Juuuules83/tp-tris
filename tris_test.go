@@ -24,30 +24,52 @@ func BenchmarkBubbleSort(b *testing.B) {
 	}
 }
 
+func BenchmarkInsertionSort(b *testing.B) {
+	for _, n := range []int{1_000, 10_000, 100_000} {
+		base := RandomScores(n)
+		scores := make([]int, n)
 
-func BenchmarkBubbleSortSorted(b *testing.B) {
-	base := SortedScores(10_000)
-	scores := make([]int, len(base))
+		b.Run(fmt.Sprintf("n=%d", n), func(b *testing.B) {
+			for i := 0; i < b.N; i++ {
+				b.StopTimer()
+				copy(scores, base)
+				b.StartTimer()
 
-	for i := 0; i < b.N; i++ {
-		b.StopTimer()
-		copy(scores, base)
-		b.StartTimer()
+				InsertionSort(scores)
+			}
+		})
+	}
+}
+func BenchmarkInsertionSortScores(b *testing.B) {
+	for _, n := range []int{1_000, 10_000, 100_000} {
+		base := RandomScores(n)
+		scores := make([]int, n)
 
-		BubbleSort(scores)
+		b.Run(fmt.Sprintf("n=%d", n), func(b *testing.B) {
+			for i := 0; i < b.N; i++ {
+				b.StopTimer()
+				copy(scores, base)
+				b.StartTimer()
+
+				InsertionSort(scores)
+			}
+		})
 	}
 }
 
+func BenchmarkMergeSort(b *testing.B) {
+	for _, n := range []int{1_000, 10_000, 100_000} {
+		base := RandomScores(n)
+		scores := make([]int, n)
 
-func BenchmarkBubbleSortReversed(b *testing.B) {
-	base := ReversedScores(10_000)
-	scores := make([]int, len(base))
+		b.Run(fmt.Sprintf("n=%d", n), func(b *testing.B) {
+			for i := 0; i < b.N; i++ {
+				b.StopTimer()
+				copy(scores, base)
+				b.StartTimer()
 
-	for i := 0; i < b.N; i++ {
-		b.StopTimer()
-		copy(scores, base)
-		b.StartTimer()
-
-		BubbleSort(scores)
+				MergeSort(scores)
+			}
+		})
 	}
 }
