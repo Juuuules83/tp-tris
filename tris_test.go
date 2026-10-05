@@ -24,7 +24,7 @@ func BenchmarkBubbleSort(b *testing.B) {
 	}
 }
 
-// EX01 : mesure sur un tableau déjà trié de 10 000 scores.
+
 func BenchmarkBubbleSortSorted(b *testing.B) {
 	base := SortedScores(10_000)
 	scores := make([]int, len(base))
@@ -38,7 +38,7 @@ func BenchmarkBubbleSortSorted(b *testing.B) {
 	}
 }
 
-// EX01 : mesure sur un tableau inversé de 10 000 scores.
+
 func BenchmarkBubbleSortReversed(b *testing.B) {
 	base := ReversedScores(10_000)
 	scores := make([]int, len(base))
