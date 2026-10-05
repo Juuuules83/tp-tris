@@ -42,16 +42,16 @@ func BenchmarkInsertionSort(b *testing.B) {
 }
 func BenchmarkInsertionSortScores(b *testing.B) {
 	for _, n := range []int{1_000, 10_000, 100_000} {
-		base := RandomScores(n)
-		scores := make([]int, n)
+		base := RandomPlayers(n)
+		players := make([]Score, n)
 
 		b.Run(fmt.Sprintf("n=%d", n), func(b *testing.B) {
 			for i := 0; i < b.N; i++ {
 				b.StopTimer()
-				copy(scores, base)
+				copy(players, base)
 				b.StartTimer()
 
-				InsertionSort(scores)
+				InsertionSortScores(players)
 			}
 		})
 	}
