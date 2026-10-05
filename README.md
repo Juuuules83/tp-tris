@@ -111,14 +111,7 @@ Un meilleur choix serait par exemple de choisir un pivot au milieu du tableau ou
 
 ### Résultats du benchmark :
 
-| Tri | Big O | 1 000 | 10 000 | 100 000 | ×10 | B/op |
-|---|---|---:|---:|---:|---:|---:|
-| Bulles | O(n²) | 348 410 ns | 304 506 154 ns | 10 776 925 600 ns | 35,39 | 802 816 |
-| Sélection | O(n²) | 231 649 ns | 185 011 558 ns | 18 134 268 000 ns | 98,02 | 802 816 |
-| Insertion | O(n²) | 72 476 ns | 6 164 799 ns | 655 766 200 ns | 106,37 | 401 408 |
-| Fusion | O(n log n) | 53 678 ns | 856 580 ns | 10 116 601 ns | 11,81 | 14 057 809 |
-| Rapide | O(n log n) moyen | 8 435 ns | 342 010 ns | 4 654 936 ns | 13,61 | 3 148 |
-| slices.Sort | O(n log n) | 7 872 ns | 370 084 ns | 3 418 028 ns | 9,24 | 2 280 |
+![alt text](image-8.png)
 
 ### Question : à partir de quelle taille les tris en O(n log n) deviennent-ils nettement plus rapides que les tris en O(n²) ? Vos rapports ×10 confirment-ils les complexités annoncées ?<br>
 
