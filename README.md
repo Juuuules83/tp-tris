@@ -179,13 +179,3 @@ alors qu'un tri par sélection peut donner :
 `go test -bench=PlayerSorts -benchmem -run='^$'`
 
 --------------------------------------<br>
-
-## Conclusion :<br>
-
-Ce TP m'a permis de comparer plusieurs algorithmes de tri et de voir l'impact de leur complexité sur leurs performances.
-
-Les tris en O(n²) deviennent rapidement beaucoup plus lents lorsque le nombre d'éléments augmente.
-
-Les tris en O(n log n), comme MergeSort et QuickSort, sont beaucoup plus adaptés aux grandes quantités de données.
-
-Pour trier 100 000 joueurs, je choisirais un tri en O(n log n), ou directement un tri optimisé de la bibliothèque standard lorsque celui-ci est adapté au besoin .
