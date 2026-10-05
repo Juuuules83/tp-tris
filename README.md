@@ -117,11 +117,11 @@ Un meilleur choix serait par exemple de choisir un pivot au milieu du tableau ou
 
 À partir de 10 000 éléments, les tris en O(n log n) deviennent déjà nettement plus rapides que les tris en O(n²).
 
-Les rapports ×10 montrent bien la différence entre les deux familles. Les tris en O(n²) augmentent beaucoup plus fortement, alors que les tris en O(n log n) restent beaucoup plus raisonnables.
+Les rapports ×10 montrent bien la différence entre les deux familles. Les tris en O(n²) augmentent beaucoup plus fortement, alors que les tris en O(n log n) restent beaucoup plus raisonnables .
 
 ### Question : slices.Sort repose lui aussi sur un tri rapide. Pourquoi est-il plus rapide que votre QuickSort ?<br>
 
-`slices.Sort` est plus rapide car il s'agit d'une implémentation de la bibliothèque standard de Go, qui est optimisée pour les performances et gère mieux différents cas que notre implémentation simple de QuickSort.
+`slices.Sort` est plus rapide car il s'agit d'une implémentation de la bibliothèque standard de Go, qui est optimisée pour les performances et gère mieux différents cas que notre implémentation simple de QuickSort .
 
 ### Capture du benchmark :
 
@@ -140,7 +140,7 @@ InsertionSortScores trie des structures `Score` au lieu de simples entiers.
 
 Sur 10 000 éléments, InsertionSortScores prend environ **13 983 107 ns/op**, ce qui est quasiment identique à InsertionSort sur 10 000 scores avec environ **13 983 529 ns/op**.
 
-La différence est donc très faible. Le tri reste en O(n²) et la comparaison se fait simplement sur le champ `Score`.
+La différence est donc très faible. Le tri reste en O(n²) et la comparaison se fait simplement sur le champ `Score` .
 
 ### Capture du benchmark :
 
@@ -155,9 +155,9 @@ La différence est donc très faible. Le tri reste en O(n²) et la comparaison s
 
 ### Question : lesquels de vos tris sont stables ? Expliquez, en rejouant l'exemple avec les cartes, pourquoi le tri par sélection ne l'est pas.<br>
 
-InsertionSortScores est stable car lorsqu'il y a deux joueurs avec le même score, leur ordre d'arrivée est conservé.
+InsertionSortScores est stable car lorsqu'il y a deux joueurs avec le même score, leur ordre d'arrivée est conservé .
 
-SelectionSortScores n'est pas stable car il peut échanger directement deux éléments. Cet échange peut inverser l'ordre de deux joueurs ayant le même score.
+SelectionSortScores n'est pas stable car il peut échanger directement deux éléments. Cet échange peut inverser l'ordre de deux joueurs ayant le même score .
 
 Avec l'exemple :
 
