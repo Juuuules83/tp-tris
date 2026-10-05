@@ -188,4 +188,4 @@ Les tris en O(n²) deviennent rapidement beaucoup plus lents lorsque le nombre d
 
 Les tris en O(n log n), comme MergeSort et QuickSort, sont beaucoup plus adaptés aux grandes quantités de données.
 
-Pour trier 100 000 joueurs, je choisirais un tri en O(n log n), ou directement un tri optimisé de la bibliothèque standard lorsque celui-ci est adapté au besoin.
+Pour trier 100 000 joueurs, je choisirais un tri en O(n log n), ou directement un tri optimisé de la bibliothèque standard lorsque celui-ci est adapté au besoin .
