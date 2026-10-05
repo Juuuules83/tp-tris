@@ -49,7 +49,10 @@ func NearlySortedScores(n int) []int {
 func RandomPlayers(n int) []Score {
 	players := make([]Score, n)
 	for i := range players {
-		players[i] = Score{Player: fmt.Sprintf("Joueur%05d", i+1), Score: r.Intn(101)}
+		players[i] = Score{
+			Player: fmt.Sprintf("Joueur%05d", i+1),
+			Score:  r.Intn(101),
+		}
 	}
 	return players
 }
